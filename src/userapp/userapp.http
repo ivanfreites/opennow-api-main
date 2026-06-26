@@ -1,0 +1,73 @@
+GET http://localhost:3000/api/plots
+
+GET http://localhost:3000/api/plots/684c8bd02ae4e5f0333939af
+
+POST http://localhost:3000/api/plots
+Content-Type: application/json
+
+{
+  "name": "Lote experimental",
+  "cadastralNumber": "CN-001",
+  "area": 12.5,
+  "location": "Sector norte",
+  "status": "planted",
+  "tasks": [
+    {
+      "type": "planting",
+      "date": "2025-08-01T00:00:00.000Z",
+      "inputs": [
+        {
+          "name": "Maíz híbrido",
+          "type": "seed",
+          "quantity": 50,
+          "unit": "kg"
+        }
+      ]
+    }
+  ],
+  "rainfall": [
+    {
+      "date": "2025-08-02T00:00:00.000Z",
+      "millimeters": 12.3
+    }
+  ]
+}
+
+PUT http://localhost:3000/api/plots/684b9907d79c41bdd6f62e03
+Content-Type: application/json
+
+{
+  "name": "Lote modificado",
+  "cadastralNumber": "CN-001",
+  "area": 12.5,
+  "location": "Sector norte",
+  "status": "planted",
+  "tasks": [
+    {
+      "type": "planting",
+      "date": "2025-08-01T00:00:00.000Z",
+      "inputs": [
+        {
+          "name": "Maíz híbrido",
+          "type": "seed",
+          "quantity": 50,
+          "unit": "kg"
+        }
+      ]
+    }
+  ],
+  "rainfall": [
+    {
+      "date": "2025-08-02T00:00:00.000Z",
+      "millimeters": 12.3
+    }
+  ]
+}
+
+PATCH http://localhost:3000/api/plots/684b9907d79c41bdd6f62e03
+Content-Type: application/json
+
+{
+  "location": "Sector central",
+  "status": "free"
+}

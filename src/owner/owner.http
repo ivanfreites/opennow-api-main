@@ -1,0 +1,37 @@
+GET http://localhost:3000/api/machinery
+
+GET http://localhost:3000/api/machinery/684c8bd02ae4e5f0333939af
+
+POST http://localhost:3000/api/machinery
+Content-Type: application/json
+
+{
+  "name": "Pulverizadora",
+  "brand": "Metalfor",
+  "model": "7040",
+  "status": "active",
+  "hours_used": 1500,
+  "purchase_date": "2022-04-10"
+}
+
+PUT http://localhost:3000/api/machinery/684b9907d79c41bdd6f62e03
+Content-Type: application/json
+
+{
+  "name": "Pulverizadora modificada",
+  "brand": "Metalfor",
+  "model": "7040",
+  "status": "active",
+  "hours_used": 1500,
+  "purchase_date": "2022-04-10"
+}
+
+PATCH http://localhost:3000/api/plots/684b9907d79c41bdd6f62e03
+Content-Type: application/json
+
+{
+  "brand": "Golondrin",
+  "model": "1020",
+}
+
+DELETE http://localhost:3000/api/machinery/684b9907d79c41bdd6f62e03

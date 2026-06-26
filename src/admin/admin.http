@@ -1,0 +1,41 @@
+GET http://localhost:3000/api/employees
+
+GET http://localhost:3000/api/employees/684c8bd02ae4e5f0333939af
+
+POST http://localhost:3000/api/employees
+Content-Type: application/json
+
+{
+  "fullname": "Juan Perez",           
+  "role": "Supervisor de obra",                 
+  "seniority": 5,            
+  "availablehours": 40,
+  "salary": 50000,
+  "overtimehours": 5,        
+  "performancescore": 90,     
+  "assignedtasks": ["planting"],
+}
+
+PUT http://localhost:3000/api/employees/684b9907d79c41bdd6f62e03
+Content-Type: application/json
+
+{
+ "fullname": "Juan Perez",           
+ "role": "Supervisor de obra",                 
+ "seniority": 5,            
+ "availablehours": 40,       
+ "salary": 50000,
+ "overtimehours": 5,        
+ "performancescore": 90,     
+ "assignedtasks": ["planting"],
+}
+
+PATCH http://localhost:3000/api/employees/684b9907d79c41bdd6f62e03
+Content-Type: application/json
+
+{
+  "role": "Encargado de mantenimiento",
+  "overtimehours": 10
+}
+
+DELETE http://localhost:3000/api/employees/684b9907d79c41bdd6f62e03
