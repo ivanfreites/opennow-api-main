@@ -8,6 +8,7 @@ export class AdminController {
     async deleteAdmin(req: Request, res: Response) {
         const adminId = req.params.id;
 
+
         const deleted = await adminRepository.delete(adminId);
         if (!deleted) {
             res.status(404).json({
@@ -28,6 +29,7 @@ export class AdminController {
         const admins = await adminRepository.findAll();
         res.json(admins);
     }
+    
 
     async findAdminById(req: Request, res: Response) {
         const adminId = req.params.id;
